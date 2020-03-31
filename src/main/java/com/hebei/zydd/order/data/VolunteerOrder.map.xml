@@ -21,8 +21,8 @@
 			<if test="type != null"> AND volunteer_order.type  =#{type} </if>
 			<if test="title!= null and title != ''"> AND volunteer_order.title  LIKE '%${title}%'  </if>
 			<if test="startTime != null"> AND volunteer_order.start_time  =#{startTime} </if>
-			<if test="startTime != null"> AND volunteer_order.start_time  >=#{beginstartTime,jdbcType=TIMESTAMP} </if>
-			<if test="startTime != null"> AND volunteer_order.start_time <![CDATA[ <=#{endstartTime,jdbcType=TIMESTAMP}]]> </if>
+			<if test="beginstartTime != null"> AND volunteer_order.start_time  >=#{beginstartTime,jdbcType=TIMESTAMP} </if>
+			<if test="endstartTime != null"> AND volunteer_order.start_time <![CDATA[ <=#{endstartTime,jdbcType=TIMESTAMP}]]> </if>
 			<if test="position!= null and position != ''"> AND volunteer_order.position  LIKE '%${position}%'  </if>
 			<if test="files!= null and files != ''"> AND volunteer_order.files  LIKE '%${files}%'  </if>
 			<if test="status != null"> AND volunteer_order.status  =#{status} </if>
