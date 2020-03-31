@@ -1,0 +1,48 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: app
+  datasource:
+    name: test
+    url: jdbc:mysql://cdb-o742k9kc.bj.tencentcdb.com:10035/app?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: mapper321
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+mybatis:
+  mapper-locations: classpath*:com/hebei/*/*/data/*.map.xml
+  typeAliasesPackage: com.hebei.*.*.data
+
+logging:
+  config: classpath:logback-spring.xml
+
+#springfox:
+#  documentation:
+#    swagger:
+#      v2:
+#        host: 140.143.35.107:8081
+
+swagger:
+  serviceName: app
+  description: api说明文档
+  developer: mapper
+  url:
+  email: 547008022@qq.com

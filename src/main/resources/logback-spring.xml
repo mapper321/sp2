@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!--文件输出格式 -->
+    <property name="PATTERN" value="%-12(%d{yyyy-MM-dd HH:mm:ss.SSS}) |-%-5level [%thread] %c [%L] -| %msg%n"/>
+    <!-- 日志文件位置及名称 -->
+    <property name="LOG_DIR" value="logs"></property>
+    <springProperty scope="context" name="APP_NAME" source="spring.application.name"/>
+    <!-- 控制台输出 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 每天产生一个文件 -->
+    <appender name="FILE_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 文件路径 -->
+        <file>${LOG_DIR}/bkcc-${APP_NAME}.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 文件名称 -->
+            <fileNamePattern>${LOG_DIR}/bkcc-${APP_NAME}-info.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>100</maxHistory>
+            <!-- <cleanHistoryOnStart>true</cleanHistoryOnStart> -->
+            <!-- <totalSizeCap>20KB</totalSizeCap> -->
+        </rollingPolicy>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>${PATTERN}</pattern>
+        </layout>
+    </appender>
+
+    <logger name="com.hebei" level="debug"/>
+    <logger name="io.swagger.models.parameters.AbstractSerializableParameter" level="error"/>
+
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+    </root>
+    <root level="info">
+        <appender-ref ref="FILE_APPENDER"/>
+    </root>
+</configuration>

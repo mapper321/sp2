@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.hebei.zydd.order.data.VolunteerOrder">
+	<resultMap id="VolunteerOrder" type="com.hebei.zydd.order.data.VolunteerOrder">
+		<id property="id" column="id" jdbcType="NUMERIC"/>
+		<result property="type" column="type" jdbcType="NUMERIC"/>
+		<result property="title" column="title" jdbcType="VARCHAR"/>
+		<result property="startTime" column="start_time" jdbcType="TIMESTAMP"/>
+		<result property="position" column="position" jdbcType="VARCHAR"/>
+		<result property="files" column="files" jdbcType="VARCHAR"/>
+		<result property="status" column="status" jdbcType="NUMERIC"/>
+	</resultMap>
+
+	<sql id="columns">
+		volunteer_order.id,volunteer_order.type,volunteer_order.title,volunteer_order.start_time,volunteer_order.position,volunteer_order.files,volunteer_order.status
+	</sql>
+	
+	<sql id="dynamicWhere">
+		<where>
+			<if test="id != null"> AND volunteer_order.id  =#{id} </if>
+			<if test="type != null"> AND volunteer_order.type  =#{type} </if>
+			<if test="title!= null and title != ''"> AND volunteer_order.title  LIKE '%${title}%'  </if>
+			<if test="startTime != null"> AND volunteer_order.start_time  =#{startTime} </if>
+			<if test="startTime != null"> AND volunteer_order.start_time  >=#{beginstartTime,jdbcType=TIMESTAMP} </if>
+			<if test="startTime != null"> AND volunteer_order.start_time <![CDATA[ <=#{endstartTime,jdbcType=TIMESTAMP}]]> </if>
+			<if test="position!= null and position != ''"> AND volunteer_order.position  LIKE '%${position}%'  </if>
+			<if test="files!= null and files != ''"> AND volunteer_order.files  LIKE '%${files}%'  </if>
+			<if test="status != null"> AND volunteer_order.status  =#{status} </if>
+		</where>
+	</sql>
+
+	<insert id="add" parameterType="com.hebei.zydd.order.data.VolunteerOrder">
+		INSERT INTO volunteer_order
+		(id,type,title,start_time,position,files,status)
+		VALUES
+		(#{id,jdbcType=NUMERIC}, #{type,jdbcType=NUMERIC}, #{title,jdbcType=VARCHAR}, #{startTime,jdbcType=TIMESTAMP}, #{position,jdbcType=VARCHAR}, #{files,jdbcType=VARCHAR}, #{status,jdbcType=NUMERIC})
+	</insert>
+	
+	<delete id="delById" parameterType="java.lang.Long">
+		DELETE FROM volunteer_order 
+		WHERE
+		id=#{id}
+	</delete>
+	
+	<update id="update" parameterType="com.hebei.zydd.order.data.VolunteerOrder">
+		UPDATE volunteer_order SET
+		<if test="id != null"> volunteer_order.id  =#{id} </if>
+		,volunteer_order.type=#{type,jdbcType=NUMERIC}
+		,volunteer_order.title=#{title,jdbcType=VARCHAR}
+		,volunteer_order.start_time=#{startTime,jdbcType=TIMESTAMP}
+		,volunteer_order.position=#{position,jdbcType=VARCHAR}
+		,volunteer_order.files=#{files,jdbcType=VARCHAR}
+		,volunteer_order.status=#{status,jdbcType=NUMERIC}
+		WHERE
+		id=#{id}
+	</update>
+		    
+	<select id="getById" parameterType="java.lang.Long" resultMap="VolunteerOrder">
+		SELECT <include refid="columns"/>
+		FROM volunteer_order
+		WHERE
+		id=#{id}
+	</select>
+	
+	<select id="getAll" resultMap="VolunteerOrder">
+		SELECT <include refid="columns"/>
+		FROM volunteer_order   
+		<include refid="dynamicWhere" />
+		<if test="orderSeq !=null and orderSeq !=''">
+		order by ${orderField} ${orderSeq}
+		</if>
+		<if test="orderField == null or orderField == ''">
+		order by volunteer_order.id  desc
+		</if>
+	</select>
+</mapper>
