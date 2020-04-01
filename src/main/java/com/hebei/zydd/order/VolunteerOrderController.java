@@ -14,11 +14,13 @@ import com.hebei.core.web.controller.BaseController;
 import io.swagger.annotations.Api;
 import com.hebei.zydd.order.data.VolunteerOrder;
 import io.swagger.annotations.ApiOperation;
+import java.util.Date;
+
 /**
  * 
  * 开发公司:长城新媒体
  * 开发人员:mapper
- * 创建时间:2020-03-31 21:35:16
+ * 创建时间:2020-04-01 10:11:09
  */
 @Api(tags="志愿点单")
 @RestController
@@ -33,18 +35,20 @@ public class VolunteerOrderController extends BaseController {
 		return orderService.getAll(PageBean, order);
 	}
 
-    @ApiOperation(value = "根据主键查询")
+    @ApiOperation(value = "根据主键查询详情")
 	@GetMapping()
     public ResultView get(Long id) {
     	return ResultView.ok(orderService.getById(id));
     }
 
-	@ApiOperation(value = "保存")
+	@ApiOperation(value = "保存/更新")
 	@PostMapping()
 	public  ResultView save(VolunteerOrder order) {
-		ResultView ResultView=new ResultView(); 
+		ResultView ResultView=new ResultView();
+		order.setUpdateTime(new Date());
 		if(order.getId()==null||order.getId()<=0){
-			order.setId(UniqueIdUtil.genId()); 
+			order.setId(UniqueIdUtil.genId());
+			order.setCreateTime(new Date());
 			orderService.add(order);
 		}else{
 			orderService.update(order);

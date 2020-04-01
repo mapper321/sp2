@@ -5,14 +5,20 @@
 		<id property="id" column="id" jdbcType="NUMERIC"/>
 		<result property="type" column="type" jdbcType="NUMERIC"/>
 		<result property="title" column="title" jdbcType="VARCHAR"/>
-		<result property="startTime" column="start_time" jdbcType="TIMESTAMP"/>
+		<result property="content" column="content" jdbcType="CLOB"/>
+        <result property="startTime" column="start_time" jdbcType="TIMESTAMP"/>
+		<result property="address" column="address" jdbcType="VARCHAR"/>
 		<result property="position" column="position" jdbcType="VARCHAR"/>
-		<result property="files" column="files" jdbcType="VARCHAR"/>
+		<result property="files" column="files" jdbcType="CLOB"/>
 		<result property="status" column="status" jdbcType="NUMERIC"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+		<result property="createBy" column="create_by" jdbcType="NUMERIC"/>
+		<result property="updateBy" column="update_by" jdbcType="NUMERIC"/>
 	</resultMap>
 
 	<sql id="columns">
-		volunteer_order.id,volunteer_order.type,volunteer_order.title,volunteer_order.start_time,volunteer_order.position,volunteer_order.files,volunteer_order.status
+		volunteer_order.id,volunteer_order.type,volunteer_order.title,volunteer_order.content,volunteer_order.start_time,volunteer_order.address,volunteer_order.position,volunteer_order.files,volunteer_order.status,volunteer_order.create_time,volunteer_order.update_time,volunteer_order.create_by,volunteer_order.update_by
 	</sql>
 	
 	<sql id="dynamicWhere">
@@ -20,20 +26,56 @@
 			<if test="id != null"> AND volunteer_order.id  =#{id} </if>
 			<if test="type != null"> AND volunteer_order.type  =#{type} </if>
 			<if test="title!= null and title != ''"> AND volunteer_order.title  LIKE '%${title}%'  </if>
+			<if test="content!= null and content != ''"> AND volunteer_order.content  LIKE '%${content}%'  </if>
 			<if test="startTime != null"> AND volunteer_order.start_time  =#{startTime} </if>
-			<if test="beginstartTime != null"> AND volunteer_order.start_time  >=#{beginstartTime,jdbcType=TIMESTAMP} </if>
-			<if test="endstartTime != null"> AND volunteer_order.start_time <![CDATA[ <=#{endstartTime,jdbcType=TIMESTAMP}]]> </if>
+			<if test="beginstartTime != null"> AND volunteer_orderstart_time  >=#{beginstartTime,jdbcType=TIMESTAMP} </if>
+			<if test="endstartTime != null"> AND volunteer_orderstart_time <![CDATA[ <=#{endstartTime,jdbcType=TIMESTAMP}]]> </if>
+			<if test="address!= null and address != ''"> AND volunteer_order.address  LIKE '%${address}%'  </if>
 			<if test="position!= null and position != ''"> AND volunteer_order.position  LIKE '%${position}%'  </if>
 			<if test="files!= null and files != ''"> AND volunteer_order.files  LIKE '%${files}%'  </if>
 			<if test="status != null"> AND volunteer_order.status  =#{status} </if>
+			<if test="createTime != null"> AND volunteer_order.create_time  =#{createTime} </if>
+			<if test="begincreateTime != null"> AND volunteer_ordercreate_time  >=#{begincreateTime,jdbcType=TIMESTAMP} </if>
+			<if test="endcreateTime != null"> AND volunteer_ordercreate_time <![CDATA[ <=#{endcreateTime,jdbcType=TIMESTAMP}]]> </if>
+			<if test="updateTime != null"> AND volunteer_order.update_time  =#{updateTime} </if>
+			<if test="beginupdateTime != null"> AND volunteer_orderupdate_time  >=#{beginupdateTime,jdbcType=TIMESTAMP} </if>
+			<if test="endupdateTime != null"> AND volunteer_orderupdate_time <![CDATA[ <=#{endupdateTime,jdbcType=TIMESTAMP}]]> </if>
+			<if test="createBy != null"> AND volunteer_order.create_by  =#{createBy} </if>
+			<if test="updateBy != null"> AND volunteer_order.update_by  =#{updateBy} </if>
 		</where>
 	</sql>
 
 	<insert id="add" parameterType="com.hebei.zydd.order.data.VolunteerOrder">
 		INSERT INTO volunteer_order
-		(id,type,title,start_time,position,files,status)
+		(id,type,title,content,start_time,address,position,files,status,create_time,update_time,create_by,update_by)
 		VALUES
-		(#{id,jdbcType=NUMERIC}, #{type,jdbcType=NUMERIC}, #{title,jdbcType=VARCHAR}, #{startTime,jdbcType=TIMESTAMP}, #{position,jdbcType=VARCHAR}, #{files,jdbcType=VARCHAR}, #{status,jdbcType=NUMERIC})
+		(
+		#{id,jdbcType=NUMERIC}, 
+		
+		#{type,jdbcType=NUMERIC}, 
+		
+		#{title,jdbcType=VARCHAR}, 
+		
+		#{content,jdbcType=CLOB}, 
+		
+		#{startTime,jdbcType=TIMESTAMP}, 
+		
+		#{address,jdbcType=VARCHAR}, 
+		
+		#{position,jdbcType=VARCHAR}, 
+		
+		#{files,jdbcType=CLOB}, 
+		
+		#{status,jdbcType=NUMERIC}, 
+		
+		#{createTime,jdbcType=TIMESTAMP}, 
+		
+		#{updateTime,jdbcType=TIMESTAMP}, 
+		
+		#{createBy,jdbcType=NUMERIC}, 
+		
+		#{updateBy,jdbcType=NUMERIC}
+		)
 	</insert>
 	
 	<delete id="delById" parameterType="java.lang.Long">
@@ -44,13 +86,16 @@
 	
 	<update id="update" parameterType="com.hebei.zydd.order.data.VolunteerOrder">
 		UPDATE volunteer_order SET
-		<if test="id != null"> volunteer_order.id  =#{id} </if>
-		,volunteer_order.type=#{type,jdbcType=NUMERIC}
-		,volunteer_order.title=#{title,jdbcType=VARCHAR}
-		,volunteer_order.start_time=#{startTime,jdbcType=TIMESTAMP}
-		,volunteer_order.position=#{position,jdbcType=VARCHAR}
-		,volunteer_order.files=#{files,jdbcType=VARCHAR}
-		,volunteer_order.status=#{status,jdbcType=NUMERIC}
+		volunteer_order.type=#{type,jdbcType=NUMERIC},
+		volunteer_order.title=#{title,jdbcType=VARCHAR},
+		volunteer_order.content=#{content,jdbcType=CLOB},
+		volunteer_order.start_time=#{startTime,jdbcType=TIMESTAMP} ,
+		volunteer_order.address=#{address,jdbcType=VARCHAR},
+		volunteer_order.position=#{position,jdbcType=VARCHAR},
+		volunteer_order.files=#{files,jdbcType=CLOB},
+		volunteer_order.status=#{status,jdbcType=NUMERIC},
+		volunteer_order.update_time=#{updateTime,jdbcType=TIMESTAMP} ,
+		volunteer_order.update_by=#{updateBy,jdbcType=NUMERIC}
 		WHERE
 		id=#{id}
 	</update>

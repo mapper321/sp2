@@ -11,41 +11,59 @@ public abstract class BaseModel implements Serializable{
 	private static final long serialVersionUID = 1L;
 	//创建时间
 	@ApiModelProperty(hidden=true)
-	protected Date createtime;
+	protected Date createTime;
 	//创建人
 	@ApiModelProperty(hidden=true)
-	protected Long createby;
+	protected Long createBy;
 	//更新时间
 	@ApiModelProperty(hidden=true)
-	protected Date updatetime;
+	protected Date updateTime;
 	//更新人
 	@ApiModelProperty(hidden=true)
-	protected Long updateby;
-	
-	public Date getCreatetime() {
-		return createtime;
+	protected Long updateBy;
+
+	//创建时间范围条件
+	@ApiModelProperty(hidden=true)
+	protected Date  begincreateTime;
+	//创建时间范围条件
+	@ApiModelProperty( hidden=true)
+	protected Date  endcreateTime;
+	//更新时间范围条件
+	@ApiModelProperty(hidden=true)
+	protected Date  beginupdateTime;
+	@ApiModelProperty(hidden=true)
+	protected Date  endupdateTime;
+
+
+	public Date getCreateTime() {
+		return createTime;
 	}
-	public void setCreatetime(Date createtime) {
-		this.createtime = createtime;
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
 	}
-	public Long getCreateby() {
-		return createby;
+
+	public Long getCreateBy() {
+		return createBy;
 	}
-	public void setCreateby(Long createby) {
-		this.createby = createby;
+
+	public void setCreateBy(Long createBy) {
+		this.createBy = createBy;
 	}
-	public Date getUpdatetime() {
-		return updatetime;
+
+	public Date getUpdateTime() {
+		return updateTime;
 	}
-	public void setUpdatetime(Date updatetime) {
-		this.updatetime = updatetime;
+
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
 	}
-	public Long getUpdateby() {
-		return updateby;
+
+	public Long getUpdateBy() {
+		return updateBy;
 	}
-	public void setUpdateby(Long updateby) {
-		this.updateby = updateby;
+
+	public void setUpdateBy(Long updateBy) {
+		this.updateBy = updateBy;
 	}
-	
-	
 }
