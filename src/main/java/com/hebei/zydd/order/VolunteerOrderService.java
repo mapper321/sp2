@@ -10,7 +10,7 @@ import com.hebei.zydd.order.data.VolunteerOrder;
  *
  * 开发公司:长城新媒体
  * 开发人员:mapper
- * 创建时间:2020-04-01 10:11:09
+ * 创建时间:2020-04-01 18:20:47
  */
 @Service
 public class VolunteerOrderService extends BaseService<VolunteerOrder> {

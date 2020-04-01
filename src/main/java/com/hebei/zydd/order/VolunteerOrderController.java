@@ -1,11 +1,7 @@
 package com.hebei.zydd.order;
 
 import javax.annotation.Resource;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import com.hebei.core.model.PageBean;
 import com.hebei.core.model.ResultView;
 import com.hebei.core.util.UniqueIdUtil;
@@ -20,7 +16,7 @@ import java.util.Date;
  * 
  * 开发公司:长城新媒体
  * 开发人员:mapper
- * 创建时间:2020-04-01 10:11:09
+ * 创建时间:2020-04-01 18:20:47
  */
 @Api(tags="志愿点单")
 @RestController
@@ -31,19 +27,19 @@ public class VolunteerOrderController extends BaseController {
 
 	@ApiOperation(value = "列表查询")
 	@GetMapping("/list")
-	public ResultView list(PageBean PageBean,VolunteerOrder order) {		
+	public ResultView<VolunteerOrder> list(PageBean PageBean,VolunteerOrder order) {
 		return orderService.getAll(PageBean, order);
 	}
 
     @ApiOperation(value = "根据主键查询详情")
 	@GetMapping()
-    public ResultView get(Long id) {
+    public ResultView<VolunteerOrder> get(Long id) {
     	return ResultView.ok(orderService.getById(id));
     }
 
 	@ApiOperation(value = "保存/更新")
 	@PostMapping()
-	public  ResultView save(VolunteerOrder order) {
+	public ResultView save(VolunteerOrder order) {
 		ResultView ResultView=new ResultView();
 		order.setUpdateTime(new Date());
 		if(order.getId()==null||order.getId()<=0){
