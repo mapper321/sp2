@@ -4,7 +4,7 @@ import com.hebei.core.model.constant.StatusCode;
 
 import java.util.List;
 
-public class ResultView extends GenericResultView<Object> {
+public class ResultView<T> extends GenericResultView<T> {
 
     /**
      *
