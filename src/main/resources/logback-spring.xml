@@ -15,10 +15,10 @@
     <!-- 每天产生一个文件 -->
     <appender name="FILE_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!-- 文件路径 -->
-        <file>${LOG_DIR}/bkcc-${APP_NAME}.log</file>
+        <file>${LOG_DIR}/${APP_NAME}.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- 文件名称 -->
-            <fileNamePattern>${LOG_DIR}/bkcc-${APP_NAME}-info.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>${LOG_DIR}/${APP_NAME}-info.%d{yyyy-MM-dd}.log</fileNamePattern>
             <maxHistory>100</maxHistory>
             <!-- <cleanHistoryOnStart>true</cleanHistoryOnStart> -->
             <!-- <totalSizeCap>20KB</totalSizeCap> -->
