@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55307849-8eb7-4670-90fd-350ae00838ee" name="Default Changelist" comment="" />
+    <list default="true" id="55307849-8eb7-4670-90fd-350ae00838ee" name="Default Changelist" comment="添加字段，打包调整">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,51 +19,159 @@
       <FILTER>com.hebei.*</FILTER>
     </SUITE>
   </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="207" />
+  </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-225279284">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="715" />
-          <entry key="xml" value="60" />
-          <entry key="yml" value="105" />
+          <entry key="java" value="3290" />
+          <entry key="txt" value="74" />
+          <entry key="xml" value="78" />
+          <entry key="yml" value="144" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="715" />
-          <entry key="XML" value="60" />
-          <entry key="YAML" value="105" />
+          <entry key="JAVA" value="3290" />
+          <entry key="PLAIN_TEXT" value="74" />
+          <entry key="XML" value="78" />
+          <entry key="YAML" value="144" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="27" />
-          <entry key="java" value="113" />
+          <entry key="class" value="60" />
+          <entry key="java" value="246" />
           <entry key="log" value="2" />
-          <entry key="pom" value="8" />
-          <entry key="xml" value="16" />
-          <entry key="yml" value="10" />
+          <entry key="pom" value="12" />
+          <entry key="xml" value="38" />
+          <entry key="yml" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="27" />
-          <entry key="JAVA" value="113" />
+          <entry key="CLASS" value="60" />
+          <entry key="JAVA" value="246" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="XML" value="24" />
-          <entry key="YAML" value="10" />
+          <entry key="XML" value="50" />
+          <entry key="YAML" value="15" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/util/RedisDistributeLock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="301">
+              <caret line="122" column="13" lean-forward="true" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-data-redis/2.2.6.RELEASE/spring-boot-starter-data-redis-2.2.6.RELEASE.pom">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.2.6.RELEASE/spring-data-redis-2.2.6.RELEASE.pom">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-58">
+              <caret line="80" selection-start-line="80" selection-end-line="80" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/io/lettuce/lettuce-core/5.2.2.RELEASE/lettuce-core-5.2.2.RELEASE-sources.jar!/io/lettuce/core/RedisAsyncCommandsImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="30" column="33" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/io/lettuce/lettuce-core/5.2.2.RELEASE/lettuce-core-5.2.2.RELEASE-sources.jar!/io/lettuce/core/api/async/RedisAsyncCommands.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.2.6.RELEASE/spring-boot-autoconfigure-2.2.6.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/data/redis/RedisAutoConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="48" column="42" lean-forward="true" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.2.6.RELEASE/spring-boot-autoconfigure-2.2.6.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/data/redis/RedisProperties.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-440">
+              <caret line="56" column="27" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/api/RedisController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="34" column="44" lean-forward="true" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -71,20 +183,19 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>com.hebei.zydd.user.data.ZUser</find>
+      <find>update</find>
+      <find>jedis</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/Application.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hebei/Application.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/util/PointCutUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/aop/WebLogAspect.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/util/BeanUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/model/AbstractData.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hebei/zydd/config/properties/SwaggerConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hebei/zydd/config/properties/SwaggerProperties.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/util/StringUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/util/SnowflakeIdWorker.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/util/UniqueIdUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/util/unique/SnowflakeIdWorker.java" />
@@ -102,15 +213,37 @@
         <option value="$PROJECT_DIR$/src/main/java/com/hebei/zydd/user/ZUserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hebei/zydd/TestController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hebei/zydd/user/data/ZUser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/model/ResultView.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/config/DateConverterConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/config/MvcConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/logback-spring.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/hebei/zydd/order/OrderController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hebei/zydd/order/data/VolunteerOrder.map.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/config/JacksonConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebei/zydd/order/data/VolunteerOrder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/model/BaseModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebei/zydd/order/data/VolunteerOrder.map.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebei/zydd/order/VolunteerOrderController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/model/ResultView.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/logback-spring.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/util/StringUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/service/template/MongoFileTemplate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebei/zydd/order/TestController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebei/zydd/order/UploadController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/util/SpringUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/config/GridFsConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/web/controller/servlet/GridFsServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/web/servlet/GridFsServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/config/MvcConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/service/UploadService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/model/UploadedFile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/service/template/MyGridFsTemplate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/service/impl/MongoUploader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/service/Uploader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/service/AbstractUploader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebei/api/UploadController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/config/RedisConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/util/RedisUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebei/core/util/RedisDistributeLock.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hebei/api/RedisController.java" />
       </list>
     </option>
   </component>
@@ -143,14 +276,14 @@
     <option name="width" value="1680" />
     <option name="height" value="940" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -163,29 +296,80 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hebei" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hebei" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hebei" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="jac&#9;FILE&#9;file://E:/codes/hebei/app/src/main/java/com/hebei/core/config/JacksonConfig.java&#10;documentation&#9;FILE&#9;jar://D:/repository/maven/rep/io/springfox/springfox-swagger2/2.9.2/springfox-swagger2-2.9.2.jar!/springfox/documentation/swagger2/configuration/Swagger2DocumentationConfiguration.class&#10;res&#9;FILE&#9;file://E:/codes/hebei/app/src/main/java/com/hebei/core/model/ResultView.java&#10;pageb&#9;FILE&#9;file://E:/codes/hebei/app/src/main/java/com/hebei/core/model/PageBean.java&#10;StringUtils&#9;PSI&#9;JAVA://org.apache.commons.lang3.StringUtils&#10;swagger&#9;PSI&#9;JAVA://io.swagger.models.Swagger#swagger&#10;my&#9;FILE&#9;jar://D:/repository/maven/rep/org/mybatis/spring/boot/mybatis-spring-boot-autoconfigure/2.1.2/mybatis-spring-boot-autoconfigure-2.1.2.jar!/org/mybatis/spring/boot/autoconfigure/MybatisProperties.class&#10;mybatisau&#9;PSI&#9;JAVA://org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1585663264033" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/hebei/core" />
+    <property name="SearchEverywhereHistoryKey" value="redisau&#9;FILE&#9;jar://D:/repository/maven/rep/org/springframework/boot/spring-boot-autoconfigure/2.2.6.RELEASE/spring-boot-autoconfigure-2.2.6.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/data/redis/RedisAutoConfiguration.java&#10;RedisAsyncCommandsImpl&#9;PSI&#9;JAVA://io.lettuce.core.RedisAsyncCommandsImpl&#10;mongo&#9;FILE&#9;jar://D:/repository/maven/rep/org/springframework/boot/spring-boot-autoconfigure/2.2.6.RELEASE/spring-boot-autoconfigure-2.2.6.RELEASE.jar!/org/springframework/boot/autoconfigure/mongo/MongoProperties.class&#10;gri&#9;FILE&#9;jar://D:/repository/maven/rep/org/springframework/data/spring-data-mongodb/2.2.6.RELEASE/spring-data-mongodb-2.2.6.RELEASE-sources.jar!/org/springframework/data/mongodb/gridfs/GridFsTemplate.java&#10;gridfstm&#9;null&#9;null&#10;mongote&#9;PSI&#9;JAVA://org.springframework.data.mongodb.core.MongoTemplate&#10;mongoconfi&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration&#10;mongodbpro&#9;PSI&#9;JAVA://org.springframework.data.mongodb.core.convert.MappingMongoConverter.MongoDbPropertyValueProvider&#10;jac&#9;FILE&#9;file://E:/codes/hebei/app/src/main/java/com/hebei/core/config/JacksonConfig.java&#10;documentation&#9;FILE&#9;jar://D:/repository/maven/rep/io/springfox/springfox-swagger2/2.9.2/springfox-swagger2-2.9.2.jar!/springfox/documentation/swagger2/configuration/Swagger2DocumentationConfiguration.class&#10;res&#9;FILE&#9;file://E:/codes/hebei/app/src/main/java/com/hebei/core/model/ResultView.java&#10;pageb&#9;FILE&#9;file://E:/codes/hebei/app/src/main/java/com/hebei/core/model/PageBean.java&#10;StringUtils&#9;PSI&#9;JAVA://org.apache.commons.lang3.StringUtils&#10;swagger&#9;PSI&#9;JAVA://io.swagger.models.Swagger#swagger&#10;my&#9;FILE&#9;jar://D:/repository/maven/rep/org/mybatis/spring/boot/mybatis-spring-boot-autoconfigure/2.1.2/mybatis-spring-boot-autoconfigure-2.1.2.jar!/org/mybatis/spring/boot/autoconfigure/MybatisProperties.class&#10;mybatisau&#9;PSI&#9;JAVA://org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1585904167151" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/hebei/core/web" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.hebei.core.config" />
+      <recent name="com.hebei.core.service.template" />
       <recent name="" />
       <recent name="com.hebei.core.controller" />
       <recent name="com.hebei.core.util" />
-      <recent name="com.hebei.zydd.config.properties" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\codes\hebei\app\src\main\java\com\hebei\core\util" />
       <recent name="E:\codes\hebei\app\src\main\resources" />
       <recent name="E:\codes\hebei\app\src\main\java\com\hebei\core" />
     </key>
@@ -233,42 +417,103 @@
       <option name="presentableId" value="Default" />
       <updated>1585634255948</updated>
     </task>
+    <task id="LOCAL-00001" summary="时间范围判断修改">
+      <created>1585664479591</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585664479591</updated>
+    </task>
+    <task id="LOCAL-00002" summary="添加字段，打包调整">
+      <created>1585707586982</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585707586982</updated>
+    </task>
+    <task id="LOCAL-00003" summary="resultview 添加泛型">
+      <created>1585736277050</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1585736277050</updated>
+    </task>
+    <task id="LOCAL-00004" summary="从新生成代码">
+      <created>1585736490643</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1585736490643</updated>
+    </task>
+    <task id="LOCAL-00005" summary="日志名称调整">
+      <created>1585736664484</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1585736664484</updated>
+    </task>
+    <task id="LOCAL-00006" summary="文件上传（mongodb）">
+      <created>1585824041973</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1585824041973</updated>
+    </task>
+    <task id="LOCAL-00007" summary="删除无用import">
+      <created>1585824540202</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1585824540202</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2185501" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32936078" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32936078" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49865952" visible="true" weight="0.20308311" />
+      <window_info id="Structure" order="1" sideWeight="0.5013405" side_tool="true" weight="0.17761394" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3531961" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.22426869" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35977337" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3696884" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Coverage" sideWeight="0.5008375" side_tool="true" visible="true" weight="0.2595949" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Maven Projects" sideWeight="0.49916247" visible="true" weight="0.2595949" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" sideWeight="0.4992248" visible="true" weight="0.12466488" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Coverage" order="8" sideWeight="0.5007752" side_tool="true" weight="0.25799572" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="时间范围判断修改" />
+    <MESSAGE value="添加字段，打包调整" />
+    <MESSAGE value="resultview 添加泛型" />
+    <MESSAGE value="从新生成代码" />
+    <MESSAGE value="日志名称调整" />
+    <MESSAGE value="文件上传（mongodb）" />
+    <MESSAGE value="删除无用import" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除无用import" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -279,6 +524,12 @@
           <properties />
           <option name="timeStamp" value="15" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hebei/core/util/RedisDistributeLock.java</url>
+          <line>121</line>
+          <properties />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
@@ -288,6 +539,11 @@
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
+        <expression-string>result != null &amp;&amp; result &gt; 0</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>orderService.getAll(PageBean, order)</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -295,407 +551,421 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/util/unique/SnowflakeIdWorker.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-mongodb/2.2.6.RELEASE/spring-data-mongodb-2.2.6.RELEASE-sources.jar!/org/springframework/data/mongodb/gridfs/GridFsOperationsSupport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="208" selection-start-line="208" selection-end-line="208" />
+        <state relative-caret-position="153">
+          <caret line="91" column="23" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/model/AbstractData.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.2.6.RELEASE/spring-boot-2.2.6.RELEASE.jar!/org/springframework/boot/context/properties/EnableConfigurationProperties.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/web/controller/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.5.3/mybatis-3.5.3.jar!/org/apache/ibatis/session/Configuration.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="720" selection-start-line="720" selection-end-line="720" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/spring/boot/mybatis-spring-boot-autoconfigure/2.1.1/mybatis-spring-boot-autoconfigure-2.1.1.jar!/org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/spring/boot/mybatis-spring-boot-autoconfigure/2.1.1/mybatis-spring-boot-autoconfigure-2.1.1.jar!/org/mybatis/spring/boot/autoconfigure/MybatisProperties.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Ognl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/mybatis/BaseDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/model/BaseModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="638" column="18" selection-start-line="638" selection-start-column="18" selection-end-line="638" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/zydd/user/data/ZUser.map.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/config/properties/SwaggerProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="190">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/config/SwaggerConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+        <state relative-caret-position="80">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
           <folding>
-            <element signature="e#1103#1104#0" expanded="true" />
-            <element signature="e#1147#1148#0" expanded="true" />
+            <element signature="e#1077#1078#0" expanded="true" />
+            <element signature="e#1121#1122#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logs/bkcc-app.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis-spring/2.0.3/mybatis-spring-2.0.3.jar!/org/mybatis/spring/SqlSessionTemplate.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mongodb/mongo-java-driver/3.11.2/mongo-java-driver-3.11.2-sources.jar!/com/mongodb/client/gridfs/GridFSBucket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="98" column="23" selection-start-line="98" selection-start-column="23" selection-end-line="98" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/mybatis/IEntityDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="72" column="22" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/mybatis/GenericDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="125" column="19" selection-start-line="125" selection-start-column="19" selection-end-line="125" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/service/GenericService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#538#539#0" expanded="true" />
-            <element signature="e#580#581#0" expanded="true" />
-            <element signature="e#841#842#0" expanded="true" />
-            <element signature="e#886#887#0" expanded="true" />
-            <element signature="e#917#918#0" expanded="true" />
-            <element signature="e#966#967#0" expanded="true" />
-            <element signature="e#1262#1263#0" expanded="true" />
-            <element signature="e#1318#1319#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/model/PageBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#666#667#0" expanded="true" />
-            <element signature="e#698#699#0" expanded="true" />
-            <element signature="e#944#945#0" expanded="true" />
-            <element signature="e#988#989#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/model/GenericResultView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/zydd/user/ZUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/zydd/user/ZUserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/zydd/TestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#628#629#0" expanded="true" />
-            <element signature="e#666#667#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/NumberFormatException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/swagger/swagger-models/1.5.20/swagger-models-1.5.20.jar!/io/swagger/models/parameters/AbstractSerializableParameter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="398" selection-start-line="398" selection-end-line="398" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/json/JsonSerializer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="27" column="79" lean-forward="true" selection-start-line="27" selection-start-column="79" selection-end-line="27" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/springfox/springfox-swagger2/2.9.2/springfox-swagger2-2.9.2.jar!/springfox/documentation/swagger2/web/Swagger2Controller.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="75" selection-start-line="75" selection-end-line="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/swagger/swagger-annotations/1.5.20/swagger-annotations-1.5.20.jar!/io/swagger/annotations/ApiOperation.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/zydd/user/ZUserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/model/ResultView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="19" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#357#358#0" expanded="true" />
-            <element signature="e#406#407#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.5.RELEASE/spring-webmvc-5.2.5.RELEASE.jar!/org/springframework/web/servlet/config/annotation/WebMvcConfigurerAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.5.RELEASE/spring-webmvc-5.2.5.RELEASE-sources.jar!/org/springframework/web/servlet/config/annotation/WebMvcConfigurer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2707">
-          <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.5.RELEASE/spring-webmvc-5.2.5.RELEASE-sources.jar!/org/springframework/web/servlet/config/annotation/WebMvcConfigurerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="40" column="46" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="74" />
+        <state relative-caret-position="2954">
+          <caret line="377" column="24" lean-forward="true" selection-start-line="377" selection-start-column="24" selection-end-line="377" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/config/MvcConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/zydd/user/data/ZUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/logback-spring.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="265">
           <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/springfox/springfox-swagger-common/2.9.2/springfox-swagger-common-2.9.2.jar!/springfox/documentation/swagger/configuration/SwaggerCommonConfiguration.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/springfox/springfox-swagger2/2.9.2/springfox-swagger2-2.9.2.jar!/springfox/documentation/swagger2/configuration/Swagger2DocumentationConfiguration.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/zydd/order/data/Order.map.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/zydd/order/OrderDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/zydd/order/OrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/zydd/order/data/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/zydd/order/OrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/io/Serializable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="168" column="17" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="MavenHelperPluginDependencyAnalyzer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/zydd/order/data/VolunteerOrder.map.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.12/lombok-1.18.12.jar!/lombok/Data.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="76" selection-start-line="7" selection-start-column="76" selection-end-line="7" selection-end-column="76" />
+        <state relative-caret-position="152">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/io/InputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="259" column="22" lean-forward="true" selection-start-line="259" selection-start-column="22" selection-end-line="259" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/service/Uploader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/service/AbstractUploader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/service/impl/MongoUploader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/config/GridFsConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/service/template/MyGridFsTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-mongodb/2.2.6.RELEASE/spring-data-mongodb-2.2.6.RELEASE-sources.jar!/org/springframework/data/mongodb/gridfs/GridFsTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1368">
+          <caret line="117" column="20" selection-start-line="117" selection-start-column="20" selection-end-line="117" selection-end-column="20" />
+          <folding>
+            <element signature="e#2431#2432#0" expanded="true" />
+            <element signature="e#2470#2471#0" expanded="true" />
+            <element signature="e#3160#3161#0" expanded="true" />
+            <element signature="e#3213#3214#0" expanded="true" />
+            <element signature="e#6136#6137#0" expanded="true" />
+            <element signature="e#6169#6170#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/model/UploadedFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/model/BaseModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/web/servlet/GridFsServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="741">
+          <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.2.6.RELEASE/spring-data-redis-2.2.6.RELEASE-sources.jar!/org/springframework/data/redis/serializer/RedisSerializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.2.6.RELEASE/spring-data-redis-2.2.6.RELEASE.jar!/org/springframework/data/redis/serializer/RedisSerializer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.68/fastjson-1.2.68.jar!/com/alibaba/fastjson/JSON.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/util/RedisUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="44" column="34" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
+          <folding>
+            <element signature="e#5454#5455#0" expanded="true" />
+            <element signature="e#5513#5514#0" expanded="true" />
+            <element signature="e#7303#7304#0" expanded="true" />
+            <element signature="e#7352#7353#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.2.6.RELEASE/spring-data-redis-2.2.6.RELEASE-sources.jar!/org/springframework/data/redis/core/ValueOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="35" column="32" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.2.6.RELEASE/spring-data-redis-2.2.6.RELEASE-sources.jar!/org/springframework/data/redis/core/DefaultValueOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.2.6.RELEASE/spring-data-redis-2.2.6.RELEASE-sources.jar!/org/springframework/data/redis/core/AbstractOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="95" column="27" selection-start-line="95" selection-start-column="27" selection-end-line="95" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.2.6.RELEASE/spring-data-redis-2.2.6.RELEASE-sources.jar!/org/springframework/data/redis/core/RedisTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11">
+          <caret line="201" column="48" selection-start-line="201" selection-start-column="42" selection-end-line="201" selection-end-column="48" />
+          <folding>
+            <element signature="e#41274#41275#0" expanded="true" />
+            <element signature="e#41296#41297#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/config/RedisConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.2.6.RELEASE/spring-data-redis-2.2.6.RELEASE-sources.jar!/org/springframework/data/redis/connection/RedisConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="161" column="30" selection-start-line="161" selection-start-column="11" selection-end-line="161" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/util/PointCutUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/3.1.0/jedis-3.1.0.jar!/redis/clients/jedis/Jedis.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/3.1.0/jedis-3.1.0.jar!/redis/clients/jedis/commands/JedisCommands.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="31" column="45" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/3.1.0/jedis-3.1.0.jar!/redis/clients/jedis/params/Params.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/3.1.0/jedis-3.1.0.jar!/redis/clients/jedis/params/SetParams.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-134">
+          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+          <folding>
+            <element signature="e#539#540#0" expanded="true" />
+            <element signature="e#577#578#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/3.1.0/jedis-3.1.0-sources.jar!/redis/clients/jedis/Jedis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.2.6.RELEASE/spring-data-redis-2.2.6.RELEASE-sources.jar!/org/springframework/data/redis/connection/jedis/JedisConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="308" column="12" selection-start-line="308" selection-start-column="12" selection-end-line="308" selection-end-column="12" />
+          <folding>
+            <element signature="e#8921#8922#0" expanded="true" />
+            <element signature="e#8940#8941#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/3.1.0/jedis-3.1.0-sources.jar!/redis/clients/jedis/params/Params.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/3.1.0/jedis-3.1.0-sources.jar!/redis/clients/jedis/params/SetParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-905">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/3.1.0/jedis-3.1.0-sources.jar!/redis/clients/jedis/commands/JedisCommands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/web/controller/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/zydd/order/VolunteerOrderController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="43" column="51" lean-forward="true" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
+        <state relative-caret-position="225">
+          <caret line="23" column="55" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/api/UploadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="29" selection-start-line="29" selection-end-line="30" selection-end-column="41" />
           <folding>
-            <element signature="e#1083#1084#0" expanded="true" />
-            <element signature="e#1135#1136#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/zydd/order/data/VolunteerOrder.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/io/lettuce/lettuce-core/5.2.2.RELEASE/lettuce-core-5.2.2.RELEASE.jar!/io/lettuce/core/RedisAsyncCommandsImpl.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        <state relative-caret-position="114">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/lettuce/lettuce-core/5.2.2.RELEASE/lettuce-core-5.2.2.RELEASE-sources.jar!/io/lettuce/core/RedisAsyncCommandsImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="30" column="33" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/lettuce/lettuce-core/5.2.2.RELEASE/lettuce-core-5.2.2.RELEASE-sources.jar!/io/lettuce/core/api/async/RedisAsyncCommands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-data-redis/2.2.6.RELEASE/spring-boot-starter-data-redis-2.2.6.RELEASE.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.2.6.RELEASE/spring-data-redis-2.2.6.RELEASE.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-58">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.2.6.RELEASE/spring-boot-autoconfigure-2.2.6.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/data/redis/RedisAutoConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="48" column="42" lean-forward="true" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.2.6.RELEASE/spring-boot-autoconfigure-2.2.6.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/data/redis/RedisProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-440">
+          <caret line="56" column="27" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="10" lean-forward="true" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+        <state relative-caret-position="340">
+          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/config/DateConverterConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/util/RedisDistributeLock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-129">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="301">
+          <caret line="122" column="13" lean-forward="true" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/core/config/JacksonConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hebei/api/RedisController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        <state relative-caret-position="221">
+          <caret line="34" column="44" lean-forward="true" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
