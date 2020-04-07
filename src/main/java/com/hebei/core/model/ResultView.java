@@ -1,6 +1,6 @@
 package com.hebei.core.model;
 
-import com.hebei.core.model.constant.StatusCode;
+import com.hebei.core.model.constant.RespStatus;
 
 import java.util.List;
 
@@ -16,7 +16,7 @@ public class ResultView<T> extends GenericResultView<T> {
     }
 
     public static ResultView ok(String message) {
-        return ok(StatusCode.OK, message);
+        return ok(RespStatus.OK.getCode(), message);
     }
 
     public static ResultView ok(int code, String message) {
@@ -42,11 +42,11 @@ public class ResultView<T> extends GenericResultView<T> {
 
 
     public static ResultView error() {
-        return error("服务内部错误！请联系管理员处理");
+        return error(RespStatus.ERROR.getMsg());
     }
 
     public static ResultView error(String message) {
-        return error(StatusCode.ERROR, message);
+        return error(RespStatus.ERROR.getCode(), message);
     }
 
     public static ResultView error(int code, String message) {

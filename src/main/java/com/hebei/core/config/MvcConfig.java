@@ -1,10 +1,12 @@
 package com.hebei.core.config;
 
+import com.hebei.core.web.interceptor.AuthorizationInterceptor;
 import com.hebei.core.web.servlet.GridFsServlet;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
@@ -19,6 +21,10 @@ public class MvcConfig implements WebMvcConfigurer {
                 .allowedMethods("GET", "POST", "DELETE", "PUT").maxAge(3600);
     }
 
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(new AuthorizationInterceptor());
+    }
 
     @Bean
     public ServletRegistrationBean getServletRegistrationBean() { // 一定要返回ServletRegistrationBean

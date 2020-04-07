@@ -1,27 +1,27 @@
-package com.hebei.wdy.vedio;
+package com.hebei.wdy.video;
 
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import com.hebei.core.service.BaseService;
 import com.hebei.core.mybatis.IEntityDao;
-import com.hebei.wdy.vedio.data.Vedio;
+import com.hebei.wdy.video.data.Video;
 
 /**
  *
  * 开发公司:长城新媒体
  * 开发人员:mapper
- * 创建时间:2020-04-07 11:02:10
+ * 创建时间:2020-04-07 15:12:55
  */
 @Service
-public class VedioService extends BaseService<Vedio> {
+public class VideoService extends BaseService<Video> {
 	@Resource
-	private VedioDao dao;
+	private VideoDao dao;
 	
-	public VedioService() {
+	public VideoService() {
 	}
 	
 	@Override
-	protected IEntityDao<Vedio, Long> getEntityDao() {
+	protected IEntityDao<Video, Long> getEntityDao() {
 		return dao;
 	}
 	

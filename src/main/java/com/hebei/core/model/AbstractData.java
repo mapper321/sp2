@@ -1,7 +1,7 @@
 package com.hebei.core.model;
 
 
-import com.hebei.core.model.constant.StatusCode;
+import com.hebei.core.model.constant.RespStatus;
 
 public abstract class AbstractData {
     private boolean isSucceed;// 是否执行成功
@@ -10,7 +10,7 @@ public abstract class AbstractData {
 
     public AbstractData() {
         isSucceed = true;
-        code = StatusCode.OK;
+        code = RespStatus.OK.getCode();
         message = "";
     }
 

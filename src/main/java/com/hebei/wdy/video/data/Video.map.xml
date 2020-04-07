@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.hebei.wdy.video.data.Video">
+	<resultMap id="Video" type="com.hebei.wdy.video.data.Video">
+		<id property="id" column="id" jdbcType="NUMERIC"/>
+		<result property="title" column="title" jdbcType="VARCHAR"/>
+		<result property="content" column="content" jdbcType="CLOB"/>
+		<result property="contentType" column="content_type" jdbcType="NUMERIC"/>
+		<result property="cover" column="cover" jdbcType="VARCHAR"/>
+		<result property="source" column="source" jdbcType="VARCHAR"/>
+		<result property="sourceType" column="source_type" jdbcType="NUMERIC"/>
+		<result property="videoDuration" column="video_duration" jdbcType="NUMERIC"/>
+		<result property="videoUrl" column="video_url" jdbcType="VARCHAR"/>
+        <result property="videoDate" column="video_date" jdbcType="TIMESTAMP"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+		<result property="createBy" column="create_by" jdbcType="NUMERIC"/>
+		<result property="updateBy" column="update_by" jdbcType="NUMERIC"/>
+	</resultMap>
+
+	<sql id="columns">
+		video.id,video.title,video.content,video.content_type,video.cover,video.source,video.source_type,video.video_duration,video.video_url,video.video_date,video.create_time,video.update_time,video.create_by,video.update_by
+	</sql>
+	
+	<sql id="dynamicWhere">
+		<where>
+			<if test="id != null"> AND video.id  =#{id} </if>
+			<if test="title!= null and title != ''"> AND video.title  LIKE '%${title}%'  </if>
+			<if test="content!= null and content != ''"> AND video.content  LIKE '%${content}%'  </if>
+			<if test="contentType != null"> AND video.content_type  =#{contentType} </if>
+			<if test="cover!= null and cover != ''"> AND video.cover  LIKE '%${cover}%'  </if>
+			<if test="source!= null and source != ''"> AND video.source  LIKE '%${source}%'  </if>
+			<if test="sourceType != null"> AND video.source_type  =#{sourceType} </if>
+			<if test="videoDuration != null"> AND video.video_duration  =#{videoDuration} </if>
+			<if test="videoUrl!= null and videoUrl != ''"> AND video.video_url  LIKE '%${videoUrl}%'  </if>
+			<if test="videoDate != null"> AND video.video_date  =#{videoDate} </if>
+			<if test="beginvideoDate != null"> AND videovideo_date  >=#{beginvideoDate,jdbcType=TIMESTAMP} </if>
+			<if test="endvideoDate != null"> AND videovideo_date <![CDATA[ <=#{endvideoDate,jdbcType=TIMESTAMP}]]> </if>
+			<if test="createTime != null"> AND video.create_time  =#{createTime} </if>
+			<if test="begincreateTime != null"> AND videocreate_time  >=#{begincreateTime,jdbcType=TIMESTAMP} </if>
+			<if test="endcreateTime != null"> AND videocreate_time <![CDATA[ <=#{endcreateTime,jdbcType=TIMESTAMP}]]> </if>
+			<if test="updateTime != null"> AND video.update_time  =#{updateTime} </if>
+			<if test="beginupdateTime != null"> AND videoupdate_time  >=#{beginupdateTime,jdbcType=TIMESTAMP} </if>
+			<if test="endupdateTime != null"> AND videoupdate_time <![CDATA[ <=#{endupdateTime,jdbcType=TIMESTAMP}]]> </if>
+			<if test="createBy != null"> AND video.create_by  =#{createBy} </if>
+			<if test="updateBy != null"> AND video.update_by  =#{updateBy} </if>
+		</where>
+	</sql>
+
+	<insert id="add" parameterType="com.hebei.wdy.video.data.Video">
+		INSERT INTO video
+		(id,title,content,content_type,cover,source,source_type,video_duration,video_url,video_date,create_time,update_time,create_by,update_by)
+		VALUES
+		(
+		#{id,jdbcType=NUMERIC}, 
+		
+		#{title,jdbcType=VARCHAR}, 
+		
+		#{content,jdbcType=CLOB}, 
+		
+		#{contentType,jdbcType=NUMERIC}, 
+		
+		#{cover,jdbcType=VARCHAR}, 
+		
+		#{source,jdbcType=VARCHAR}, 
+		
+		#{sourceType,jdbcType=NUMERIC}, 
+		
+		#{videoDuration,jdbcType=NUMERIC}, 
+		
+		#{videoUrl,jdbcType=VARCHAR}, 
+		
+		#{videoDate,jdbcType=TIMESTAMP}, 
+		
+		#{createTime,jdbcType=TIMESTAMP}, 
+		
+		#{updateTime,jdbcType=TIMESTAMP}, 
+		
+		#{createBy,jdbcType=NUMERIC}, 
+		
+		#{updateBy,jdbcType=NUMERIC}
+		)
+	</insert>
+	
+	<delete id="delById" parameterType="java.lang.Long">
+		DELETE FROM video 
+		WHERE
+		id=#{id}
+	</delete>
+	
+	<update id="update" parameterType="com.hebei.wdy.video.data.Video">
+		UPDATE video SET
+		video.title=#{title,jdbcType=VARCHAR},
+		video.content=#{content,jdbcType=CLOB},
+		video.content_type=#{contentType,jdbcType=NUMERIC},
+		video.cover=#{cover,jdbcType=VARCHAR},
+		video.source=#{source,jdbcType=VARCHAR},
+		video.source_type=#{sourceType,jdbcType=NUMERIC},
+		video.video_duration=#{videoDuration,jdbcType=NUMERIC},
+		video.video_url=#{videoUrl,jdbcType=VARCHAR},
+		video.video_date=#{videoDate,jdbcType=TIMESTAMP} ,
+		video.update_time=#{updateTime,jdbcType=TIMESTAMP} ,
+		video.update_by=#{updateBy,jdbcType=NUMERIC}
+		WHERE
+		id=#{id}
+	</update>
+		    
+	<select id="getById" parameterType="java.lang.Long" resultMap="Video">
+		SELECT <include refid="columns"/>
+		FROM video
+		WHERE
+		id=#{id}
+	</select>
+	
+	<select id="getAll" resultMap="Video">
+		SELECT <include refid="columns"/>
+		FROM video   
+		<include refid="dynamicWhere" />
+		<if test="orderSeq !=null and orderSeq !=''">
+		order by ${orderField} ${orderSeq}
+		</if>
+		<if test="orderField == null or orderField == ''">
+		order by video.id  desc
+		</if>
+	</select>
+</mapper>

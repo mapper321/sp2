@@ -1,4 +1,4 @@
-package com.hebei.wdy.vedio.data;
+package com.hebei.wdy.video.data;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -11,12 +11,12 @@ import com.hebei.core.model.BaseModel;
  * 对象功能:文明微电影
  * 开发公司:长城新媒体
  * 开发人员:mapper
- * 创建时间:2020-04-07 11:02:10
+ * 创建时间:2020-04-07 15:12:55
  */
 @Data
 @EqualsAndHashCode(callSuper=false)
 @ApiModel(value="文明微电影",description="文明微电影")
-public class Vedio extends BaseModel {
+public class Video extends BaseModel {
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -64,30 +64,30 @@ public class Vedio extends BaseModel {
 	/**
 	 * 视频时长
 	 */
-	@ApiModelProperty(value="视频时长",name="vedioDuration")
-	protected Long  vedioDuration;
+	@ApiModelProperty(value="视频时长",name="videoDuration")
+	protected Long  videoDuration;
 
 	/**
 	 * 视频地址
 	 */
-	@ApiModelProperty(value="视频地址",name="vedioUrl")
-	protected String  vedioUrl;
+	@ApiModelProperty(value="视频地址",name="videoUrl")
+	protected String  videoUrl;
 
 	/**
 	 * 视频创建时间
 	 */
-	@ApiModelProperty(value="视频创建时间",name="vedioDate")
-	protected java.util.Date  vedioDate;
+	@ApiModelProperty(value="视频创建时间",name="videoDate")
+	protected java.util.Date  videoDate;
 	/**
 	 * 开始 视频创建时间
 	 */
-	@ApiModelProperty(value="开始视频创建时间",name="beginvedioDate", hidden=true)
-	protected java.util.Date  beginvedioDate;
+	@ApiModelProperty(value="开始视频创建时间",name="beginvideoDate", hidden=true)
+	protected java.util.Date  beginvideoDate;
 	/**
 	 * 结束  视频创建时间
 	 */
-	@ApiModelProperty(value="结束视频创建时间",name="endvedioDate", hidden=true)
-	protected java.util.Date  endvedioDate;	
+	@ApiModelProperty(value="结束视频创建时间",name="endvideoDate", hidden=true)
+	protected java.util.Date  endvideoDate;	
 
 
 
