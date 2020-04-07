@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.hebei.wdy.vedio.data.Vedio">
+	<resultMap id="Vedio" type="com.hebei.wdy.vedio.data.Vedio">
+		<id property="id" column="id" jdbcType="NUMERIC"/>
+		<result property="title" column="title" jdbcType="VARCHAR"/>
+		<result property="content" column="content" jdbcType="CLOB"/>
+		<result property="contentType" column="content_type" jdbcType="NUMERIC"/>
+		<result property="cover" column="cover" jdbcType="VARCHAR"/>
+		<result property="source" column="source" jdbcType="VARCHAR"/>
+		<result property="sourceType" column="source_type" jdbcType="NUMERIC"/>
+		<result property="vedioDuration" column="vedio_duration" jdbcType="NUMERIC"/>
+		<result property="vedioUrl" column="vedio_url" jdbcType="VARCHAR"/>
+        <result property="vedioDate" column="vedio_date" jdbcType="TIMESTAMP"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+		<result property="createBy" column="create_by" jdbcType="VARCHAR"/>
+        <result property="updateBy" column="update_by" jdbcType="TIMESTAMP"/>
+	</resultMap>
+
+	<sql id="columns">
+		vedio.id,vedio.title,vedio.content,vedio.content_type,vedio.cover,vedio.source,vedio.source_type,vedio.vedio_duration,vedio.vedio_url,vedio.vedio_date,vedio.create_time,vedio.update_time,vedio.create_by,vedio.update_by
+	</sql>
+	
+	<sql id="dynamicWhere">
+		<where>
+			<if test="id != null"> AND vedio.id  =#{id} </if>
+			<if test="title!= null and title != ''"> AND vedio.title  LIKE '%${title}%'  </if>
+			<if test="content!= null and content != ''"> AND vedio.content  LIKE '%${content}%'  </if>
+			<if test="contentType != null"> AND vedio.content_type  =#{contentType} </if>
+			<if test="cover!= null and cover != ''"> AND vedio.cover  LIKE '%${cover}%'  </if>
+			<if test="source!= null and source != ''"> AND vedio.source  LIKE '%${source}%'  </if>
+			<if test="sourceType != null"> AND vedio.source_type  =#{sourceType} </if>
+			<if test="vedioDuration != null"> AND vedio.vedio_duration  =#{vedioDuration} </if>
+			<if test="vedioUrl!= null and vedioUrl != ''"> AND vedio.vedio_url  LIKE '%${vedioUrl}%'  </if>
+			<if test="vedioDate != null"> AND vedio.vedio_date  =#{vedioDate} </if>
+			<if test="beginvedioDate != null"> AND vediovedio_date  >=#{beginvedioDate,jdbcType=TIMESTAMP} </if>
+			<if test="endvedioDate != null"> AND vediovedio_date <![CDATA[ <=#{endvedioDate,jdbcType=TIMESTAMP}]]> </if>
+			<if test="createTime != null"> AND vedio.create_time  =#{createTime} </if>
+			<if test="begincreateTime != null"> AND vediocreate_time  >=#{begincreateTime,jdbcType=TIMESTAMP} </if>
+			<if test="endcreateTime != null"> AND vediocreate_time <![CDATA[ <=#{endcreateTime,jdbcType=TIMESTAMP}]]> </if>
+			<if test="updateTime != null"> AND vedio.update_time  =#{updateTime} </if>
+			<if test="beginupdateTime != null"> AND vedioupdate_time  >=#{beginupdateTime,jdbcType=TIMESTAMP} </if>
+			<if test="endupdateTime != null"> AND vedioupdate_time <![CDATA[ <=#{endupdateTime,jdbcType=TIMESTAMP}]]> </if>
+			<if test="createBy!= null and createBy != ''"> AND vedio.create_by  LIKE '%${createBy}%'  </if>
+			<if test="updateBy != null"> AND vedio.update_by  =#{updateBy} </if>
+			<if test="beginupdateBy != null"> AND vedioupdate_by  >=#{beginupdateBy,jdbcType=TIMESTAMP} </if>
+			<if test="endupdateBy != null"> AND vedioupdate_by <![CDATA[ <=#{endupdateBy,jdbcType=TIMESTAMP}]]> </if>
+		</where>
+	</sql>
+
+	<insert id="add" parameterType="com.hebei.wdy.vedio.data.Vedio">
+		INSERT INTO vedio
+		(id,title,content,content_type,cover,source,source_type,vedio_duration,vedio_url,vedio_date,create_time,update_time,create_by,update_by)
+		VALUES
+		(
+		#{id,jdbcType=NUMERIC}, 
+		
+		#{title,jdbcType=VARCHAR}, 
+		
+		#{content,jdbcType=CLOB}, 
+		
+		#{contentType,jdbcType=NUMERIC}, 
+		
+		#{cover,jdbcType=VARCHAR}, 
+		
+		#{source,jdbcType=VARCHAR}, 
+		
+		#{sourceType,jdbcType=NUMERIC}, 
+		
+		#{vedioDuration,jdbcType=NUMERIC}, 
+		
+		#{vedioUrl,jdbcType=VARCHAR}, 
+		
+		#{vedioDate,jdbcType=TIMESTAMP}, 
+		
+		#{createTime,jdbcType=TIMESTAMP}, 
+		
+		#{updateTime,jdbcType=TIMESTAMP}, 
+		
+		#{createBy,jdbcType=VARCHAR}, 
+		
+		#{updateBy,jdbcType=TIMESTAMP}
+		)
+	</insert>
+	
+	<delete id="delById" parameterType="java.lang.Long">
+		DELETE FROM vedio 
+		WHERE
+		id=#{id}
+	</delete>
+	
+	<update id="update" parameterType="com.hebei.wdy.vedio.data.Vedio">
+		UPDATE vedio SET
+		vedio.title=#{title,jdbcType=VARCHAR},
+		vedio.content=#{content,jdbcType=CLOB},
+		vedio.content_type=#{contentType,jdbcType=NUMERIC},
+		vedio.cover=#{cover,jdbcType=VARCHAR},
+		vedio.source=#{source,jdbcType=VARCHAR},
+		vedio.source_type=#{sourceType,jdbcType=NUMERIC},
+		vedio.vedio_duration=#{vedioDuration,jdbcType=NUMERIC},
+		vedio.vedio_url=#{vedioUrl,jdbcType=VARCHAR},
+		vedio.vedio_date=#{vedioDate,jdbcType=TIMESTAMP} ,
+		vedio.update_time=#{updateTime,jdbcType=TIMESTAMP} ,
+		vedio.update_by=#{updateBy,jdbcType=TIMESTAMP} 
+		WHERE
+		id=#{id}
+	</update>
+		    
+	<select id="getById" parameterType="java.lang.Long" resultMap="Vedio">
+		SELECT <include refid="columns"/>
+		FROM vedio
+		WHERE
+		id=#{id}
+	</select>
+	
+	<select id="getAll" resultMap="Vedio">
+		SELECT <include refid="columns"/>
+		FROM vedio   
+		<include refid="dynamicWhere" />
+		<if test="orderSeq !=null and orderSeq !=''">
+		order by ${orderField} ${orderSeq}
+		</if>
+		<if test="orderField == null or orderField == ''">
+		order by vedio.id  desc
+		</if>
+	</select>
+</mapper>

@@ -29,7 +29,7 @@ public class RedisConfiguration {
      * 使用fastjson序列化对象
      *
      * @param <T>
-     * @author jim
+     * @author mapper
      */
     static class RedisObjectSerializer<T> implements RedisSerializer<T> {
 
