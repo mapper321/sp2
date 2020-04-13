@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.hebei.sys.res.data.SysRes">
+	<resultMap id="SysRes" type="com.hebei.sys.res.data.SysRes">
+		<id property="id" column="id" jdbcType="NUMERIC"/>
+		<result property="name" column="name" jdbcType="VARCHAR"/>
+		<result property="pid" column="pid" jdbcType="NUMERIC"/>
+		<result property="alias" column="alias" jdbcType="VARCHAR"/>
+		<result property="path" column="path" jdbcType="VARCHAR"/>
+		<result property="src" column="src" jdbcType="VARCHAR"/>
+		<result property="type" column="type" jdbcType="NUMERIC"/>
+		<result property="status" column="status" jdbcType="VARCHAR"/>
+		<result property="description" column="description" jdbcType="VARCHAR"/>
+		<result property="params" column="params" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+		<result property="createBy" column="create_by" jdbcType="NUMERIC"/>
+		<result property="updateBy" column="update_by" jdbcType="NUMERIC"/>
+	</resultMap>
+
+	<sql id="columns">
+		sys_res.id,sys_res.name,sys_res.pid,sys_res.alias,sys_res.path,sys_res.src,sys_res.type,sys_res.status,sys_res.description,sys_res.params,sys_res.create_time,sys_res.update_time,sys_res.create_by,sys_res.update_by
+	</sql>
+	
+	<sql id="dynamicWhere">
+		<where>
+			<if test="id != null"> AND sys_res.id  =#{id} </if>
+			<if test="name!= null and name != ''"> AND sys_res.name  LIKE '%${name}%'  </if>
+			<if test="pid != null"> AND sys_res.pid  =#{pid} </if>
+			<if test="alias!= null and alias != ''"> AND sys_res.alias  LIKE '%${alias}%'  </if>
+			<if test="path!= null and path != ''"> AND sys_res.path  LIKE '%${path}%'  </if>
+			<if test="src!= null and src != ''"> AND sys_res.src  LIKE '%${src}%'  </if>
+			<if test="type != null"> AND sys_res.type  =#{type} </if>
+			<if test="status!= null and status != ''"> AND sys_res.status  LIKE '%${status}%'  </if>
+			<if test="description!= null and description != ''"> AND sys_res.description  LIKE '%${description}%'  </if>
+			<if test="params!= null and params != ''"> AND sys_res.params  LIKE '%${params}%'  </if>
+			<if test="createTime != null"> AND sys_res.create_time  =#{createTime} </if>
+			<if test="begincreateTime != null"> AND sys_rescreate_time  >=#{begincreateTime,jdbcType=TIMESTAMP} </if>
+			<if test="endcreateTime != null"> AND sys_rescreate_time <![CDATA[ <=#{endcreateTime,jdbcType=TIMESTAMP}]]> </if>
+			<if test="updateTime != null"> AND sys_res.update_time  =#{updateTime} </if>
+			<if test="beginupdateTime != null"> AND sys_resupdate_time  >=#{beginupdateTime,jdbcType=TIMESTAMP} </if>
+			<if test="endupdateTime != null"> AND sys_resupdate_time <![CDATA[ <=#{endupdateTime,jdbcType=TIMESTAMP}]]> </if>
+			<if test="createBy != null"> AND sys_res.create_by  =#{createBy} </if>
+			<if test="updateBy != null"> AND sys_res.update_by  =#{updateBy} </if>
+		</where>
+	</sql>
+
+	<insert id="add" parameterType="com.hebei.sys.res.data.SysRes">
+		INSERT INTO sys_res
+		(id,name,pid,alias,path,src,type,status,description,params,create_time,update_time,create_by,update_by)
+		VALUES
+		(
+		#{id,jdbcType=NUMERIC}, 
+		
+		#{name,jdbcType=VARCHAR}, 
+		
+		#{pid,jdbcType=NUMERIC}, 
+		
+		#{alias,jdbcType=VARCHAR}, 
+		
+		#{path,jdbcType=VARCHAR}, 
+		
+		#{src,jdbcType=VARCHAR}, 
+		
+		#{type,jdbcType=NUMERIC}, 
+		
+		#{status,jdbcType=VARCHAR}, 
+		
+		#{description,jdbcType=VARCHAR}, 
+		
+		#{params,jdbcType=VARCHAR}, 
+		
+		#{createTime,jdbcType=TIMESTAMP}, 
+		
+		#{updateTime,jdbcType=TIMESTAMP}, 
+		
+		#{createBy,jdbcType=NUMERIC}, 
+		
+		#{updateBy,jdbcType=NUMERIC}
+		)
+	</insert>
+	
+	<delete id="delById" parameterType="java.lang.Long">
+		DELETE FROM sys_res 
+		WHERE
+		id=#{id}
+	</delete>
+	
+	<update id="update" parameterType="com.hebei.sys.res.data.SysRes">
+		UPDATE sys_res SET
+		sys_res.name=#{name,jdbcType=VARCHAR},
+		sys_res.pid=#{pid,jdbcType=NUMERIC},
+		sys_res.alias=#{alias,jdbcType=VARCHAR},
+		sys_res.path=#{path,jdbcType=VARCHAR},
+		sys_res.src=#{src,jdbcType=VARCHAR},
+		sys_res.type=#{type,jdbcType=NUMERIC},
+		sys_res.status=#{status,jdbcType=VARCHAR},
+		sys_res.description=#{description,jdbcType=VARCHAR},
+		sys_res.params=#{params,jdbcType=VARCHAR},
+		sys_res.update_time=#{updateTime,jdbcType=TIMESTAMP} ,
+		sys_res.update_by=#{updateBy,jdbcType=NUMERIC}
+		WHERE
+		id=#{id}
+	</update>
+		    
+	<select id="getById" parameterType="java.lang.Long" resultMap="SysRes">
+		SELECT <include refid="columns"/>
+		FROM sys_res
+		WHERE
+		id=#{id}
+	</select>
+	
+	<select id="getAll" resultMap="SysRes">
+		SELECT <include refid="columns"/>
+		FROM sys_res   
+		<include refid="dynamicWhere" />
+		<if test="orderSeq !=null and orderSeq !=''">
+		order by ${orderField} ${orderSeq}
+		</if>
+		<if test="orderField == null or orderField == ''">
+		order by sys_res.id  desc
+		</if>
+	</select>
+</mapper>

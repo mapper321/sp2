@@ -27,8 +27,8 @@ public class VideoController extends BaseController {
 
 	@ApiOperation(value = "列表查询")
 	@GetMapping("/list")
-	public ResultView<Video> list(PageBean PageBean,Video video) {
-		return videoService.getAll(PageBean, video);
+	public ResultView<Video> list(PageBean pageBean,Video video) {
+		return videoService.getAll(pageBean, video);
 	}
 
     @ApiOperation(value = "根据主键查询详情")

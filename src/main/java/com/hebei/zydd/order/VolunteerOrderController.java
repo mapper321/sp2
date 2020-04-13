@@ -27,8 +27,8 @@ public class VolunteerOrderController extends BaseController {
 
 	@ApiOperation(value = "列表查询")
 	@GetMapping("/list")
-	public ResultView<VolunteerOrder> list(PageBean PageBean,VolunteerOrder order) {
-		return orderService.getAll(PageBean, order);
+	public ResultView<VolunteerOrder> list(PageBean pageBean,VolunteerOrder order) {
+		return orderService.getAll(pageBean, order);
 	}
 
     @ApiOperation(value = "根据主键查询详情")

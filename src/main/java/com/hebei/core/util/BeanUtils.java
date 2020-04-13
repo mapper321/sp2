@@ -1,8 +1,12 @@
 package com.hebei.core.util;
 
+import org.apache.commons.beanutils.BeanUtilsBean;
+import org.apache.commons.beanutils.ConvertUtilsBean;
+import org.apache.commons.beanutils.PropertyUtilsBean;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.Map;
 
@@ -14,7 +18,7 @@ import java.util.Map;
  */
 public class BeanUtils {
     private static Logger logger = LoggerFactory.getLogger(BeanUtils.class);
-
+    private static BeanUtilsBean beanUtilsBean = new BeanUtilsBean(new ConvertUtilsBean(), new PropertyUtilsBean());
 
     /**
      * 可以用于判断 Map,Collection,String,Array,Long是否为空
@@ -120,6 +124,17 @@ public class BeanUtils {
      */
     public static boolean isInherit(Class cls, Class parentClass) {
         return parentClass.isAssignableFrom(cls);
+    }
+
+    /**
+     * 【功能描述】: 将实体类转换为map<br>
+     * @param: [o]
+     * @return: java.util.Map<java.lang.String,java.lang.Object>
+     * @author: mapper
+     * @since: 2020/4/13
+     */
+    public static Map<String,Object> convertBean2Map(Object o) throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
+        return beanUtilsBean.getPropertyUtils().describe(o);
     }
 
 
