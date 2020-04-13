@@ -11,7 +11,7 @@ import com.hebei.core.model.BaseModel;
  * 对象功能:志愿点单
  * 开发公司:长城新媒体
  * 开发人员:mapper
- * 创建时间:2020-04-01 18:20:47
+ * 创建时间:2020-04-13 10:06:00
  */
 @Data
 @EqualsAndHashCode(callSuper=false)
@@ -82,6 +82,30 @@ public class VolunteerOrder extends BaseModel {
 	 */
 	@ApiModelProperty(value="活动状态",name="status")
 	protected Short  status;
+
+	/**
+	 * 发布人姓名
+	 */
+	@ApiModelProperty(value="发布人姓名",name="pubUserName")
+	protected String  pubUserName;
+
+	/**
+	 * 发布人性别
+	 */
+	@ApiModelProperty(value="发布人性别",name="pubUserSex")
+	protected Short  pubUserSex;
+
+	/**
+	 * 发布人年龄
+	 */
+	@ApiModelProperty(value="发布人年龄",name="pubUserAge")
+	protected Short  pubUserAge;
+
+	/**
+	 * 发布人联系方式
+	 */
+	@ApiModelProperty(value="发布人联系方式",name="pubUserPhone")
+	protected String  pubUserPhone;
 
 
 

@@ -11,6 +11,10 @@
 		<result property="position" column="position" jdbcType="VARCHAR"/>
 		<result property="files" column="files" jdbcType="CLOB"/>
 		<result property="status" column="status" jdbcType="NUMERIC"/>
+		<result property="pubUserName" column="pub_user_name" jdbcType="VARCHAR"/>
+		<result property="pubUserSex" column="pub_user_sex" jdbcType="NUMERIC"/>
+		<result property="pubUserAge" column="pub_user_age" jdbcType="NUMERIC"/>
+		<result property="pubUserPhone" column="pub_user_phone" jdbcType="VARCHAR"/>
         <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
         <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
 		<result property="createBy" column="create_by" jdbcType="NUMERIC"/>
@@ -18,7 +22,7 @@
 	</resultMap>
 
 	<sql id="columns">
-		volunteer_order.id,volunteer_order.type,volunteer_order.title,volunteer_order.content,volunteer_order.start_time,volunteer_order.address,volunteer_order.position,volunteer_order.files,volunteer_order.status,volunteer_order.create_time,volunteer_order.update_time,volunteer_order.create_by,volunteer_order.update_by
+		volunteer_order.id,volunteer_order.type,volunteer_order.title,volunteer_order.content,volunteer_order.start_time,volunteer_order.address,volunteer_order.position,volunteer_order.files,volunteer_order.status,volunteer_order.pub_user_name,volunteer_order.pub_user_sex,volunteer_order.pub_user_age,volunteer_order.pub_user_phone,volunteer_order.create_time,volunteer_order.update_time,volunteer_order.create_by,volunteer_order.update_by
 	</sql>
 	
 	<sql id="dynamicWhere">
@@ -34,6 +38,10 @@
 			<if test="position!= null and position != ''"> AND volunteer_order.position  LIKE '%${position}%'  </if>
 			<if test="files!= null and files != ''"> AND volunteer_order.files  LIKE '%${files}%'  </if>
 			<if test="status != null"> AND volunteer_order.status  =#{status} </if>
+			<if test="pubUserName!= null and pubUserName != ''"> AND volunteer_order.pub_user_name  LIKE '%${pubUserName}%'  </if>
+			<if test="pubUserSex != null"> AND volunteer_order.pub_user_sex  =#{pubUserSex} </if>
+			<if test="pubUserAge != null"> AND volunteer_order.pub_user_age  =#{pubUserAge} </if>
+			<if test="pubUserPhone!= null and pubUserPhone != ''"> AND volunteer_order.pub_user_phone  LIKE '%${pubUserPhone}%'  </if>
 			<if test="createTime != null"> AND volunteer_order.create_time  =#{createTime} </if>
 			<if test="begincreateTime != null"> AND volunteer_ordercreate_time  >=#{begincreateTime,jdbcType=TIMESTAMP} </if>
 			<if test="endcreateTime != null"> AND volunteer_ordercreate_time <![CDATA[ <=#{endcreateTime,jdbcType=TIMESTAMP}]]> </if>
@@ -47,7 +55,7 @@
 
 	<insert id="add" parameterType="com.hebei.zydd.order.data.VolunteerOrder">
 		INSERT INTO volunteer_order
-		(id,type,title,content,start_time,address,position,files,status,create_time,update_time,create_by,update_by)
+		(id,type,title,content,start_time,address,position,files,status,pub_user_name,pub_user_sex,pub_user_age,pub_user_phone,create_time,update_time,create_by,update_by)
 		VALUES
 		(
 		#{id,jdbcType=NUMERIC}, 
@@ -67,6 +75,14 @@
 		#{files,jdbcType=CLOB}, 
 		
 		#{status,jdbcType=NUMERIC}, 
+		
+		#{pubUserName,jdbcType=VARCHAR}, 
+		
+		#{pubUserSex,jdbcType=NUMERIC}, 
+		
+		#{pubUserAge,jdbcType=NUMERIC}, 
+		
+		#{pubUserPhone,jdbcType=VARCHAR}, 
 		
 		#{createTime,jdbcType=TIMESTAMP}, 
 		
@@ -94,6 +110,10 @@
 		volunteer_order.position=#{position,jdbcType=VARCHAR},
 		volunteer_order.files=#{files,jdbcType=CLOB},
 		volunteer_order.status=#{status,jdbcType=NUMERIC},
+		volunteer_order.pub_user_name=#{pubUserName,jdbcType=VARCHAR},
+		volunteer_order.pub_user_sex=#{pubUserSex,jdbcType=NUMERIC},
+		volunteer_order.pub_user_age=#{pubUserAge,jdbcType=NUMERIC},
+		volunteer_order.pub_user_phone=#{pubUserPhone,jdbcType=VARCHAR},
 		volunteer_order.update_time=#{updateTime,jdbcType=TIMESTAMP} ,
 		volunteer_order.update_by=#{updateBy,jdbcType=NUMERIC}
 		WHERE
