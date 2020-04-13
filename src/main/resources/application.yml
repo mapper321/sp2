@@ -40,7 +40,10 @@ spring:
     mongodb:
       host: 106.12.11.4
       port: 27017
-      database: app
+      authenticationDatabase: admin
+      username: mapper
+      password: mapper
+
 mybatis:
   mapper-locations: classpath*:com/hebei/*/*/data/*.map.xml
   typeAliasesPackage: com.hebei.*.*.data

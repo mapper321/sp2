@@ -11,7 +11,7 @@ import com.hebei.core.model.BaseModel;
  * 对象功能:志愿点单
  * 开发公司:长城新媒体
  * 开发人员:mapper
- * 创建时间:2020-04-13 10:06:00
+ * 创建时间:2020-04-13 18:09:19
  */
 @Data
 @EqualsAndHashCode(callSuper=false)
@@ -26,9 +26,9 @@ public class VolunteerOrder extends BaseModel {
 	protected Long  id;
 
 	/**
-	 * 分类：1社区服务、2文化教育、3关爱服务、4绿色环保、5医疗卫生、6城市运行、7应急救援、8赛会服务、9在线志愿服务
+	 * 分类：1助残养老、2生态建设、3时间培训、4社区服务、5大型活动、6应急救援、7环境保护、8医疗健康、9便民服务、10扶贫济困、11其他
 	 */
-	@ApiModelProperty(value="分类：1社区服务、2文化教育、3关爱服务、4绿色环保、5医疗卫生、6城市运行、7应急救援、8赛会服务、9在线志愿服务",name="type")
+	@ApiModelProperty(value="分类：1助残养老、2生态建设、3时间培训、4社区服务、5大型活动、6应急救援、7环境保护、8医疗健康、9便民服务、10扶贫济困、11其他",name="type")
 	protected Short  type;
 
 	/**

@@ -9,9 +9,7 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 /**
@@ -36,4 +34,12 @@ public class UploadController {
         return ResultView.ok(mongoUploader.upload(file, folder));
     }
 
+    @PostMapping(value = "/muti/mongo")
+    @ApiOperation(value = "批量上传文件到mongodb")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "folder", value = "所属文件夹,不填默认为default", paramType = "query", required = false)
+    })
+    public ResultView<UploadedFile> mutiUpload(MultipartFile[] files, String folder) {
+        return ResultView.ok(mongoUploader.upload(files, folder));
+    }
 }
