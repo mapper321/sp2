@@ -62,6 +62,14 @@ public interface IEntityDao<T, PK extends Serializable> {
      */
     public List<T> getAll();
 
+    /**
+     * 获取指定条件数据，不分页
+     *
+     * @param params
+     * @return
+     */
+    public List<T> getAll(Object params);
+
 
     /**
      * 分页获取指定条件数据

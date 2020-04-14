@@ -16,7 +16,7 @@ import java.util.Date;
 /**
  * 开发公司:长城新媒体
  * 开发人员:mapper
- * 创建时间:2020-04-13 18:25:54
+ * 创建时间:2020-04-14 09:47:55
  */
 @Api(tags = "菜单资源")
 @RestController
@@ -27,8 +27,8 @@ public class SysResController extends BaseController {
 
     @ApiOperation(value = "列表查询")
     @GetMapping("/list")
-    public ResultView<SysRes> list(PageBean PageBean, SysRes sysRes) {
-        return sysResService.getAll(PageBean, sysRes);
+    public ResultView<SysRes> list(PageBean pageBean, SysRes sysRes) {
+        return sysResService.getAll(pageBean, sysRes);
     }
 
     @ApiOperation(value = "根据主键查询详情")
@@ -59,6 +59,7 @@ public class SysResController extends BaseController {
         ResultView.addKV("id", sysRes.getId().toString());
         return ResultView;
     }
+
 
     @ApiOperation(value = "根据主键删除")
     @DeleteMapping()

@@ -11,7 +11,7 @@ import com.hebei.core.model.BaseModel;
  * 对象功能:菜单资源
  * 开发公司:长城新媒体
  * 开发人员:mapper
- * 创建时间:2020-04-13 18:25:54
+ * 创建时间:2020-04-14 09:47:55
  */
 @Data
 @EqualsAndHashCode(callSuper=false)
@@ -65,7 +65,7 @@ public class SysRes extends BaseModel {
 	 * 菜单状态:1展示、2隐藏
 	 */
 	@ApiModelProperty(value="菜单状态:1展示、2隐藏",name="status")
-	protected String  status;
+	protected Short  status;
 
 	/**
 	 * 菜单描述

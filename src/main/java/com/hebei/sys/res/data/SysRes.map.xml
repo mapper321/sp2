@@ -9,7 +9,7 @@
 		<result property="path" column="path" jdbcType="VARCHAR"/>
 		<result property="src" column="src" jdbcType="VARCHAR"/>
 		<result property="type" column="type" jdbcType="NUMERIC"/>
-		<result property="status" column="status" jdbcType="VARCHAR"/>
+		<result property="status" column="status" jdbcType="NUMERIC"/>
 		<result property="description" column="description" jdbcType="VARCHAR"/>
 		<result property="params" column="params" jdbcType="VARCHAR"/>
         <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
@@ -27,11 +27,11 @@
 			<if test="id != null"> AND sys_res.id  =#{id} </if>
 			<if test="name!= null and name != ''"> AND sys_res.name  LIKE '%${name}%'  </if>
 			<if test="pid != null"> AND sys_res.pid  =#{pid} </if>
-			<if test="alias!= null and alias != ''"> AND sys_res.alias  LIKE '%${alias}%'  </if>
-			<if test="path!= null and path != ''"> AND sys_res.path  LIKE '%${path}%'  </if>
+			<if test="alias!= null and alias != ''"> AND sys_res.alias = #{alias}   </if>
+			<if test="path!= null and path != ''"> AND sys_res.path  LIKE '${path}%'  </if>
 			<if test="src!= null and src != ''"> AND sys_res.src  LIKE '%${src}%'  </if>
 			<if test="type != null"> AND sys_res.type  =#{type} </if>
-			<if test="status!= null and status != ''"> AND sys_res.status  LIKE '%${status}%'  </if>
+			<if test="status != null"> AND sys_res.status  =#{status} </if>
 			<if test="description!= null and description != ''"> AND sys_res.description  LIKE '%${description}%'  </if>
 			<if test="params!= null and params != ''"> AND sys_res.params  LIKE '%${params}%'  </if>
 			<if test="createTime != null"> AND sys_res.create_time  =#{createTime} </if>
@@ -64,7 +64,7 @@
 		
 		#{type,jdbcType=NUMERIC}, 
 		
-		#{status,jdbcType=VARCHAR}, 
+		#{status,jdbcType=NUMERIC}, 
 		
 		#{description,jdbcType=VARCHAR}, 
 		
@@ -94,7 +94,7 @@
 		sys_res.path=#{path,jdbcType=VARCHAR},
 		sys_res.src=#{src,jdbcType=VARCHAR},
 		sys_res.type=#{type,jdbcType=NUMERIC},
-		sys_res.status=#{status,jdbcType=VARCHAR},
+		sys_res.status=#{status,jdbcType=NUMERIC},
 		sys_res.description=#{description,jdbcType=VARCHAR},
 		sys_res.params=#{params,jdbcType=VARCHAR},
 		sys_res.update_time=#{updateTime,jdbcType=TIMESTAMP} ,

@@ -24,7 +24,7 @@ interface Uploader {
 
     /**
      * 【功能描述】: 批量上传<br>
-     * @param: [request, source 文件夹名称]
+     * @param: [files, source 文件夹名称]
      * @return: java.util.List<UploadedFile> 按顺序返回上传后的文件信息列表
      * @author: mapper
      * @since: 2020/4/2

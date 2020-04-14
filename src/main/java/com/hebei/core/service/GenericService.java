@@ -41,8 +41,12 @@ public abstract class GenericService<T, PK extends Serializable> {
         return getEntityDao().getById(id);
     }
 
-    public List<T> getList(String statatementName, PageBean pb) {
-        List list = getEntityDao().getList(statatementName, pb);
+    public ResultView getList(String statatementName, Object params, PageBean pb) {
+        return getEntityDao().getList(statatementName, params, pb);
+    }
+
+    public List<T> getList(String statatementName, Object params) {
+        List list = getEntityDao().getList(statatementName, params);
         return list;
     }
 
@@ -52,6 +56,10 @@ public abstract class GenericService<T, PK extends Serializable> {
 
     public ResultView getAll(PageBean pb, Object params) {
         return getEntityDao().getAll(pb, params);
+    }
+
+    public List<T> getAll(Object params) {
+        return getEntityDao().getAll(params);
     }
 
 }

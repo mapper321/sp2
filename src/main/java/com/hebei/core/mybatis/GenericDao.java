@@ -121,6 +121,12 @@ abstract class GenericDao<T, PK extends Serializable> implements IEntityDao<T, P
     }
 
     @Override
+    public List<T> getAll(Object params) {
+        String statement = getMybatisMapperNamespace() + "." + "getAll";
+        return sqlSessionTemplate.selectList(statement,params);
+    }
+
+    @Override
     public ResultView getAll(PageBean pb, Object params) {
         String sqlKey = "getAll";
         return getList(sqlKey, params, pb);
