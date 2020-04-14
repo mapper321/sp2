@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: s1
+  cloud:
+    config:
+      uri: http://140.143.35.107:82
+      name: application
+      username: user
+      password: password123
+      label: master
+
+#启动参数添加
+# --spring.profiles.active=dev
